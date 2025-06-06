@@ -16,7 +16,8 @@ import java.util.List;
 public class ProductController {
 
     private final ProductService productService;
-
+    /* Create a New Product
+    *  Return a new product with id */
     @PostMapping
     public ResponseEntity<ProductResponseDTO> createProduct(@RequestBody ProductRequestDTO productRequest) {
         return ResponseEntity.ok(productService.save(productRequest));
