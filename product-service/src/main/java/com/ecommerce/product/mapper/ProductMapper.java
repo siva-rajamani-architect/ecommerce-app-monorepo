@@ -13,12 +13,14 @@ public class ProductMapper {
                  .description(productRequest.description())
                  .price(productRequest.price())
                  .category(productRequest.category())
+                 .productCode(productRequest.productCode())
                  .build();
      }
 
      public ProductResponseDTO mapProductToProductResponse(Product product) {
          return new ProductResponseDTO(product.getId(),
                  product.getName(), product.getDescription(),
-                 product.getPrice(),product.getCategory());
+                 product.getPrice(),product.getCategory(),
+                 product.getProductCode());
      }
 }

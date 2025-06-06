@@ -5,6 +5,7 @@ public record ProductRequestDTO(
         String name,
         String description,
         double price,
-        String category
+        String category,
+        String productCode
 ) {
 }
